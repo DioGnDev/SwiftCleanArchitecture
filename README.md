@@ -1,4 +1,4 @@
-Clean Architecture using VIP XCode templates
+Clean Architecture VIP XCode templates
 
 Please README first
 
