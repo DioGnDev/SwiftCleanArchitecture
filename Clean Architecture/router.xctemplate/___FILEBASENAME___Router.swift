@@ -13,14 +13,14 @@ import Foundation
 import UIKit
 
 protocol ___VARIABLE_sceneName___RouterLogic {
-    func gotoDetail(with item: ___VARIABLE_sceneName___Entity)
+    func gotoDetail(with item: String)
 }
 
 class ___VARIABLE_sceneName___Router: ___VARIABLE_sceneName___RouterLogic {
     
     weak var viewController: ___VARIABLE_sceneName___UI?
     
-    func gotoDetail(with item: ___VARIABLE_sceneName___Entity) {
+    func gotoDetail(with item: "passing_data_to_destination_controller") {
         let destination = UIViewController()
         viewController?.navigationController?.pushViewController(destination, animated: true)
     }

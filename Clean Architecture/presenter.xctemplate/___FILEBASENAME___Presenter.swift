@@ -12,14 +12,14 @@
 import Foundation
 
 protocol ___VARIABLE_sceneName___PresenterLogic {
-    func present___VARIABLE_sceneName___(___VARIABLE_sceneName___: [___VARIABLE_sceneName___Entity])
+    func present___VARIABLE_sceneName___(___VARIABLE_sceneName___: [String])
 }
 
 class ___VARIABLE_sceneName___Presenter: ___VARIABLE_sceneName___PresenterLogic {
     
     weak var viewController: ___VARIABLE_sceneName___DisplayLogic?
     
-    func present___VARIABLE_sceneName___(___VARIABLE_sceneName___: [___VARIABLE_sceneName___Entity]) {
+    func present___VARIABLE_sceneName___(___VARIABLE_sceneName___: [String]) {
         let viewModel = ___VARIABLE_sceneName___.map(___VARIABLE_sceneName___ViewModel.init)
         viewController?.display___VARIABLE_sceneName___(viewModel: viewModel)
     }
@@ -28,25 +28,16 @@ class ___VARIABLE_sceneName___Presenter: ___VARIABLE_sceneName___PresenterLogic 
 
 class ___VARIABLE_sceneName___ViewModel{
     
-    private let entity: ___VARIABLE_sceneName___Entity
+    private let entity: String
     
-    init(entity: ___VARIABLE_sceneName___Entity) {
+    init(entity: String) {
         self.entity = entity
     }
     
-    func getEntity() -> ___VARIABLE_sceneName___Entity {
+    //write setter getter for viewmodel here
+    
+    func getEntity() -> String{
         return entity
     }
     
-    func getID() -> Int {
-        return entity.id
-    }
-    
-    func getName() -> String {
-        return "Hello \(entity.name)"
-    }
-    
-    func getDescription() -> String {
-        return "Hello \(entity.description)"
-    }
 }
