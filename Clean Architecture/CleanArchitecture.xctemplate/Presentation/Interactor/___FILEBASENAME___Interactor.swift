@@ -31,7 +31,7 @@ class ___VARIABLE_sceneName___Interactor: ___VARIABLE_sceneName___InteractorLogi
     //example method 
     func get___VARIABLE_sceneName___(param: ___VARIABLE_sceneName___Request) {
         
-        get___VARIABLE_sceneName___Usecase.call(param: param) { (result) in
+        get___VARIABLE_sceneName___Usecase.execute(param: param) { (result) in
             switch result {
             case .failure(let error):
                 //present error to view
@@ -40,7 +40,7 @@ class ___VARIABLE_sceneName___Interactor: ___VARIABLE_sceneName___InteractorLogi
                 if items.count == 0 || items.isEmpty {
                     //present empty view
                 }else {
-                    self.presenter?.present___VARIABLE_sceneName___(___VARIABLE_sceneName___: items)
+                    self.presenter?.present___VARIABLE_sceneName___(entities: items)
                 }
                 break
             }
