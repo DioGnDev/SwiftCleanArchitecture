@@ -24,7 +24,7 @@ class Get___VARIABLE_sceneName___Usecase: BaseUsecase {
         self.repository = repository
     }
     
-    override func execute(param: ___VARIABLE_sceneName___Request,
+    func execute(param: ___VARIABLE_sceneName___Request,
                        completion: @escaping (Result<[___VARIABLE_sceneName___Entity], DataError>) -> Void) {
         
         repository.get___VARIABLE_sceneName___(parameter: param.toParam()) { (result) in

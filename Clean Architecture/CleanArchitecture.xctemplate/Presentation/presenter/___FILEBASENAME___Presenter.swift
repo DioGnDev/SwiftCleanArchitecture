@@ -34,19 +34,19 @@ class ___VARIABLE_sceneName___ViewModel{
         self.entity = entity
     }
     
-    func getEntity() -> ___VARIABLE_sceneName___Entity {
+    var getEntity: ___VARIABLE_sceneName___Entity {
         return entity
     }
     
-    func getID() -> Int {
+    var getID: Int {
         return entity.id
     }
     
-    func getName() -> String {
+    var getName: String {
         return "Hello \(entity.name)"
     }
     
-    func getDescription() -> String {
+    var getDescription: String {
         return "Hello \(entity.description)"
     }
 }
