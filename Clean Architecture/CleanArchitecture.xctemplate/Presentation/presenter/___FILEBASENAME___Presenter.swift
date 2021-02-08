@@ -12,15 +12,15 @@
 import Foundation
 
 protocol ___VARIABLE_sceneName___PresenterLogic {
-    func present___VARIABLE_sceneName___(___VARIABLE_sceneName___: [___VARIABLE_sceneName___Entity])
+    func present___VARIABLE_sceneName___(entities: [___VARIABLE_sceneName___Entity])
 }
 
 class ___VARIABLE_sceneName___Presenter: ___VARIABLE_sceneName___PresenterLogic {
     
     weak var viewController: ___VARIABLE_sceneName___DisplayLogic?
     
-    func present___VARIABLE_sceneName___(___VARIABLE_sceneName___: [___VARIABLE_sceneName___Entity]) {
-        let viewModel = ___VARIABLE_sceneName___.map(___VARIABLE_sceneName___ViewModel.init)
+    func present___VARIABLE_sceneName___(entities: [___VARIABLE_sceneName___Entity]) {
+        let viewModel = entities.map(___VARIABLE_sceneName___ViewModel.init)
         viewController?.display___VARIABLE_sceneName___(viewModel: viewModel)
     }
     

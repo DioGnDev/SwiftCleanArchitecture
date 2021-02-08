@@ -28,8 +28,10 @@ class ___VARIABLE_sceneName___RepositoryImpl: ___VARIABLE_sceneName___Repository
                 completion(.failure(error))
             case .success(let models):
                 let entities = models
-                    .map { model -> ___VARIABLE_sceneName___Entity in
-                        return ___VARIABLE_sceneName___Entity(id: model.id, name: model.name, description: model.name)
+                    .map {
+                        ___VARIABLE_sceneName___Entity(id: $0.id ?? 0,
+                                                       name: $0.name ?? "",
+                                                       description: $0.name ?? "")
                     }
                 completion(.success(entities))
             }
