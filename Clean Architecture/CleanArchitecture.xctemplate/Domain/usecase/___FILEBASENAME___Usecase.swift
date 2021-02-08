@@ -11,7 +11,11 @@
 
 import Foundation
 
-class Get___VARIABLE_sceneName___Usecase: BaseUsecase<[___VARIABLE_sceneName___Entity], ___VARIABLE_sceneName___Request> {
+class Get___VARIABLE_sceneName___Usecase: BaseUsecase {
+    
+    typealias T = [___VARIABLE_sceneName___Entity]
+    typealias P = ___VARIABLE_sceneName___Request
+    typealias E = DataError
     
     //repository
     let repository: ___VARIABLE_sceneName___RepositoryLogic
@@ -20,7 +24,7 @@ class Get___VARIABLE_sceneName___Usecase: BaseUsecase<[___VARIABLE_sceneName___E
         self.repository = repository
     }
     
-    override func call(param: ___VARIABLE_sceneName___Request,
+    override func execute(param: ___VARIABLE_sceneName___Request,
                        completion: @escaping (Result<[___VARIABLE_sceneName___Entity], DataError>) -> Void) {
         
         repository.get___VARIABLE_sceneName___(parameter: param.toParam()) { (result) in

@@ -10,24 +10,17 @@
 //
 
 import Foundation
-import ObjectMapper
 
-class ___VARIABLE_sceneName___Model: ___VARIABLE_sceneName___Entity, Mappable {
+struct ___VARIABLE_sceneName___Model: Codable{
     
-    init() {
-        super.init()
-    }
+    var id: Int?
+    var name: String?
+    var description: String?
     
-    required init?(map: Map) {
-        super.init()
-        self.id = 0
-        self.name = ""
-        self.description = ""
+    enum CodingKeys: String, CodingKey{
+        case id = "id"
+        case name = "name"
+        case description = "description"
     }
 
-    func mapping(map: Map) {
-        id <- map["property_id"]
-        name <- map["name"]
-        description <- map["description"]
-    }
 }

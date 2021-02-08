@@ -11,9 +11,16 @@
 
 import Foundation
 
-public class BaseUsecase<R, P> {
-    func call(
-        param: P,
-        completion: @escaping (Result<R, DataError>) -> Void
-    ) {}
+protocol BaseUsecase {
+    associatedtype T
+    associatedtype P
+    associatedtype E: Error
+    
+    func execute(param: P,
+                 completion: @escaping(Result<T, E>) -> Void)
+}
+
+extension BaseUsecase{
+    func execute(param: P,
+                 completion: @escaping(Result<T, E>) -> Void) {}
 }
