@@ -31,7 +31,7 @@ class ___VARIABLE_sceneName___RepositoryImpl: ___VARIABLE_sceneName___Repository
                     .map {
                         ___VARIABLE_sceneName___Entity(id: $0.id ?? 0,
                                                        name: $0.name ?? "",
-                                                       description: $0.name ?? "")
+                                                       description: $0.description ?? "")
                     }
                 completion(.success(entities))
             }
